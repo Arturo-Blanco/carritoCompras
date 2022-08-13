@@ -13,31 +13,51 @@
 </head>
 <body>
     <div class="container">
-        <div id="tittle"> 
+        <div class="tittle"> 
     <h1>Carrito de compras</h1>
-        </div>  
+        </div> 
+        <form class="carritoCompras">
+            <input type="text" class="product" placeholder="Nombre producto">
+            <input type="number" class="cant" placeholder="Cantidad productos">
+            <input type="number" class="cost" placeholder="Costo producto">
+            <input type="button" class="btn btn-primary btnAgregar" value=" Agregar producto">
+            <input type="button" class="btn btn-primary btnTotal" value="Total compra">
+        </form> <!-- 
     <div class="input-group input-group-sm mb-3">
         <span class="input-group-text" id="inputGroup-sizing-sm">Producto</span>
-        <input type="text" id="producto" class="largInput" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+        <input type="text" class="producto largInput" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
     </div>
         <div class="input-group input-group-sm mb-3">
         <span class="input-group-text" id="inputGroup-sizing-sm"> Costo </span>
-        <input type="number" id="costo" class="largInput" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+        <input type="number" class="costo largInput" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
         </div> 
-    <button type="button" class="btn btn-primary" onclick="funcAgreg()">Agregar</button>
+    <!--<button type="button" class="btn btn-primary" onclick="funcAgreg()">Agregar</button> NOOOO USARRRR!!!!! -->
+    
     <div class="productos">
-    <div class="colum1">
-        <ul id="listProd"> 
-        </ul>  
+            <div class="colum1">
+                <h3 class="titleColum">Producto</h3>
+                <ul id="listProd"> 
+            </ul>  
     </div>
-    <div class="colum2">
-        <ul id="listCost"> 
+            <div class="colum2">
+                <h3 class="titleColum">Cantidad</h3>
+                <ul id="listCant">
+            </ul>
+    </div>
+        <div class="colum3">
+            <h3 class="titleColum">Precio Uni.</h3>
+            <ul id="listCost"> 
         </ul>
     </div>
+        <div class="colum4">
+            <h3 class="titleColum">Precio total</h3>
+            <ul id="listSub">
+            </ul>
     </div>
-    <button type="button" class="btn btn-primary" onclick="funcTotal()"> Total</button>
-    <p id="total"> </p> 
-    <script src="index.js"></script>
-    </div>
-</body>
+</div>
+    <!---<button type="button" class="btn btn-primary" onclick="funcTotal()"> Total</button> NOOOO USARRRR!!!!!-->
+            <h2 class="total"> </h2> 
+                <script src="index.js"></script>
+        </div>
+    </body>
 </html>
