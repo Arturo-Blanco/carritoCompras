@@ -1,4 +1,35 @@
 "use strict";
+let sumaTotal=0;
+let botonAgregar=document.querySelector(".btnAgregar");
+let botonTotal=document.querySelector(".btnTotal");
+
+botonAgregar.addEventListener("click",agregarProducto);
+botonTotal.addEventListener("click",calcularTotal);
+
+function agregarProducto() {
+    let producto= document.querySelector(".product").value;
+    let cantidad= document.querySelector(".cant").value;
+    let costo= document.querySelector(".cost").value;
+    let subTotal=(parseFloat(costo)*parseInt(cantidad));
+    let elemProd=document.createElement("li"); elemProd.innerHTML= producto;
+    let elemCant=document.createElement("li"); elemCant.innerHTML=cantidad;
+    let elemCost=document.createElement("li"); elemCost.innerHTML=`$` +costo;
+    let elemSubt=document.createElement("li"); elemSubt.innerHTML=`$` +subTotal;
+    listProd.appendChild(elemProd);
+    listCant.appendChild(elemCant);
+    listCost.appendChild(elemCost);
+    listSub.appendChild(elemSubt);
+    sumaTotal= sumaTotal+subTotal;
+    }
+
+function calcularTotal() {
+    document.querySelector(".total").innerHTML=`El costo total de la compra es: $ `+ sumaTotal;
+}
+
+
+
+/* 
+----------METODO UNA SOLA FUNCION--------(MUY LARGA LA FUNCION SE INTENTA MODIFICAR CODIGO)
 let subTotal= 0;
 let sumaTotal=0;
 let botonAgregar=document.querySelector(".btnAgregar");
@@ -36,7 +67,8 @@ let total= sumaTotal;
     document.querySelector(".total").innerHTML=`El costo total es: $ `+ total
 }
 
-/*let sumaTotal = 0 ;
+---------- METODO HTML Y JAVASCRIP MEZCLADOS ---------
+let sumaTotal = 0 ;
 
 function funcAgreg() {
     let producto = document.getElementById("producto").value; 
@@ -51,7 +83,6 @@ function funcAgreg() {
     listCost.appendChild(elemCost);
     sumaTotal = (parseInt(sumaTotal) + parseInt(costo));
 }
-
 function funcTotal() {
     let total = sumaTotal ;
     document.getElementById("total").innerHTML = `El costo total es: $ ` + total;   

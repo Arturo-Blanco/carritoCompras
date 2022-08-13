@@ -6,26 +6,31 @@
 ul {
     list-style: none;
 }
-#tittle{
+.tittle{
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
-    background-color: rgba(14, 143, 100, 0.74);
+    background-color: rgba(41, 84, 226, 0.74);
     margin-bottom: 2%;
     text-transform: uppercase;
 }
 .productos {
+    margin-top: 3%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
-.largInput {
-    width: 70vw;
+.product {
+width: 50vw;
+margin-bottom: 3%;
 }
-span {
-    width: 10vw;
+.cost, .cant {
+width: 15vw ;
+margin-bottom: 3%;
 }
-#total , li{
-    margin-top: 3%;
-    font-size: 2vw;
-    
+.btnTotal, .btnAgregar {
+    width: 20vw;
+}
+h2, li {
+    text-align: center;
+    font-style: italic;
 }
