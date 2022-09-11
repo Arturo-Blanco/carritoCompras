@@ -20,7 +20,7 @@ function agregarProducto() {
     listCost.appendChild(elemCost);
     listSub.appendChild(elemSubt);
     sumaTotal= sumaTotal+subTotal;
-    }
+    } 
 
 function calcularTotal() {
     document.querySelector(".total").innerHTML=`El costo total de la compra es: $ `+ sumaTotal;
